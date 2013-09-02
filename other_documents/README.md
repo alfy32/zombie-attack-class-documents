@@ -7,6 +7,7 @@ Here are the guarantees you have for bottom.png:
 
 The tiles are numbered as such:
 
+<pre>
  _________________
 |0               8|
 |9              16|
@@ -16,5 +17,6 @@ The tiles are numbered as such:
 |                 |
 |                 |
 |_________________|
+</pre>
 
 Note: You'll notice that tile 39 doesn't exist yet. Make sure not to use it or you'll get a blank spot in your map.
