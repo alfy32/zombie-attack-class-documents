@@ -1,0 +1,252 @@
+<html>
+<head>
+  <title>Lecture 1</title>
+  <style type="text/css">
+    body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #aaa;
+}
+
+#wrapper {
+  width: 850px;
+  height: 600px;
+  overflow: hidden;
+  margin: 80px auto 0 auto;
+  box-shadow: 3px 3px 3px #666;
+  background-color: #eee;
+}
+
+.slide {
+  width: auto;
+  height: 540px;
+  padding: 30px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+#controls {
+  width: 850px;
+  margin: -60px auto 0 auto;
+}
+
+#controls div {
+  width: 50px;
+  height: 50px;
+  padding: 5px 50px;
+  font-size: 36px;
+  background-color: #ccc;
+}
+
+#controls div:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+#controls #prev {
+  float: left;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-right-radius: 20px;
+}
+
+#controls #next {
+  float: right;
+  text-align: right;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  border-top-left-radius: 20px;
+}
+
+.slide h1 {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+
+.slide h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.slide h3 {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.slide ul {
+  padding: 20px 0 0 60px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.slide .author h1.name {
+  font-size: 55px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 185px;
+  margin-bottom: 30px;
+}
+
+.slide .author h3 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #44a4dd;
+}
+
+a:hover {
+  color: #66b5ff;
+}
+
+code {
+  background-color: #ccc;
+}
+
+pre > code {
+  background-color: inherit;
+  font-size: 60%;
+  line-height: 1.3;
+}
+
+.hidden {
+  display: none;
+}
+
+
+    
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+      <section class="slide"><h1>Introduction</h1>
+
+<h2>CS 3450 - Software Engineering</h2></section>
+      <section class="slide"><h3>Why is this class required?</h3>
+
+<ul>
+<li>Software Engineering teaches us how to ensure that our products meet the expectations of the customer
+<ul><li>The teacher and TA will act as your customer. Your grade depends on how well you meet our expectations with your final product</li></ul></li>
+<li>This class will see the design and execution of a large scale, non trivial programming project
+<ul><li>More details on the project to follow</li></ul></li>
+</ul></section>
+      <section class="slide"><h3>Why is this class required?</h3>
+
+<ul>
+<li>For most Computer Scientists at USU, this will be the first time you've worked on a large group project
+<ul><li>Instead of working by yourself, you will be required to participate in a group, and your group will help determine your grade through peer evaluations</li></ul></li>
+</ul></section>
+      <section class="slide"><h3>Teams</h3>
+
+<ul>
+<li>The class wil be divided into teams. You get to choose your team, so be sure to choose wisely
+<ul><li>What makes a programming team successful?</li>
+<li>What makes a programmer an asset to a team?</li>
+<li>What can you avaoid to be a helpful team member?</li>
+<li>What can you do to be sure that all team members contribute equally?</li></ul></li>
+</ul></section>
+      <section class="slide"><h3>Teams</h3>
+
+<ul>
+<li>A team will consist of 4 main roles
+<ul><li>There is no role that is more important than another. They are all necessary to ensure a complete produt</li></ul></li>
+<li>A team consists of...</li>
+</ul></section>
+      <section class="slide"><h3>Teams</h3>
+
+<ul>
+<li>Project Manager
+<ul><li>This role is extremely important. The PM will ensure the on time delivery, as well as quality, of the product</li></ul></li>
+<li>Documenter
+<ul><li>This role will ensure that all documentation is kept up to date. They will NOT be solely responsible for all documentation</li></ul></li>
+</ul></section>
+      <section class="slide"><h3>Teams</h3>
+
+<ul>
+<li>Programmer
+<ul><li>This role is to write clean, concise code with the corresponding documentation</li></ul></li>
+<li>Tester
+<ul><li>This role is to ensure the usability and vilidity of the product. All team members should test, but the "Tester" oversees all testing</li></ul></li>
+</ul></section>
+      <section class="slide"><div class="author">
+  <h1 class="name">Richie Preece</h1>
+  <h3 class="twitter">
+    <a href="http://twitter.com/richiepreece">richiepreece</a>
+  </h3>
+  <h3 class="url">
+    <a href="http://richiepreece.com">http://richiepreece.com</a>
+  </h3>
+</div>
+</section>
+  </div>
+  <script type="text/javascript">
+    /**
+ * Takes the last slide and places it at the front.
+ */
+function goBack() {
+  var wrapper = document.querySelector('#wrapper');
+  var lastSlide = wrapper.lastChild;
+  while (lastSlide != null && lastSlide.nodeType !== 1) {
+    lastSlide = lastSlide.previousSibling;
+  }
+
+  wrapper.removeChild(lastSlide);
+  wrapper.insertBefore(lastSlide, wrapper.firstChild);
+}
+
+/**
+ * Takes the first slide and places it at the end.
+ */
+function goForward() {
+  var wrapper = document.querySelector('#wrapper');
+  var firstSlide = wrapper.firstChild;
+  while (firstSlide != null && firstSlide.nodeType !== 1) {
+    firstSlide = firstSlide.nextSibling;
+  }
+
+  wrapper.removeChild(firstSlide);
+  wrapper.appendChild(firstSlide);
+}
+
+window.onload = function () {
+
+  document.onkeydown = function (e) {
+    var kc = e.keyCode;
+
+    // left, down, H, J, backspace - BACK
+    // up, right, K, L, space, enter - FORWARD
+    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
+      goBack();
+    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
+      goForward();
+    }
+  }
+
+  if (document.querySelector('#next') && document.querySelector('#prev')) {
+    document.querySelector('#next').onclick = function (e) {
+      e.preventDefault();
+      goForward();
+    }
+
+    document.querySelector('#prev').onclick = function (e) {
+      e.preventDefault();
+      goBack();
+    }
+  }
+
+}
+
+  </script>
+</body>
+</html>
