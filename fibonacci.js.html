@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Index</title>
+    <title>JSDoc: Source: fibonacci.js</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,30 +17,38 @@
 
 <div id="main">
     
-    <h1 class="page-title">Index</h1>
+    <h1 class="page-title">Source: fibonacci.js</h1>
     
     
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/**
+ * @author Richie Preece &lt;richie.preece@gmail.com>
+ * @version 0.0.1
+ * @license GPL
+ */
 
+/**
+ * @author Richie Preece &lt;richie.preece@gmail.com>
+ * @version 0.0.1
+ * @license GPL
+ * @function fibonacci
+ * @since 0.0.1
+ * @return {Number} - The value of the nth Fibonacci Number
+ * @param {Number} n - nth Fibonacci Number to calculate
+ * @param {Function} [cb] - Optional asynchronous callback to return value
+ * @todo Complete this method
+ */
+function fibonacci(n, cb){
+  if(n &lt; 2) return n;
 
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}</code></pre>
+        </article>
+    </section>
 
 
 
